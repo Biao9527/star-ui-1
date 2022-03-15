@@ -1,4 +1,6 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
   mode: 'production',
   entry: {
@@ -7,7 +9,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
     library: 'Star-ui',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -16,5 +19,11 @@ module.exports = {
         loader: 'awesome-typescript-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Star UI',
+      template: 'index.html'
+    })
+  ]
 };
