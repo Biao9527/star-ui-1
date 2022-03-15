@@ -1,16 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const path = require('path')
 module.exports = {
-  mode: 'production',
   entry: {
     index: './lib/index.tsx'
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+  },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'Star-ui',
+    library: 'Star-UI',
     libraryTarget: 'umd',
-    umdNamedDefine: true,
   },
   module: {
     rules: [
@@ -20,10 +19,4 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Star UI',
-      template: 'index.html'
-    })
-  ]
-};
+}
