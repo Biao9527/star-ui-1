@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './Button';
+import Icon from './icon';
 
 ReactDOM.render(
-  <Button/>,
-  document.getElementById('root')
-);
+  <div>
+    <Icon name="star"/>
+    <Icon name='face'/>
+  </div>,
+  document.getElementById('root'));
