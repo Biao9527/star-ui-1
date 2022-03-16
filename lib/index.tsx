@@ -4,7 +4,7 @@ import Icon from './icon';
 
 ReactDOM.render(
   <div>
-    <Icon name="star"/>
+    <Icon name="star" className='xxx'/>
     <Icon name='face'/>
   </div>,
   document.getElementById('root'));
