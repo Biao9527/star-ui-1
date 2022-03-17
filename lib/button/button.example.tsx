@@ -76,9 +76,9 @@ const buttonExample = () => {
       <h2>Loading</h2>
       <div>
         <Button loading>loading</Button>
-        <Button loading theme='dashed'>loading</Button>
-        <Button loading theme='link'>loading</Button>
-        <Button loading theme='text'>loading</Button>
+        <Button loading theme="dashed">loading</Button>
+        <Button loading theme="link">loading</Button>
+        <Button loading theme="text">loading</Button>
       </div>
     </div>
   );

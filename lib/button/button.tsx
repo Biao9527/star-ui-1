@@ -1,19 +1,25 @@
 import React from 'react';
 import './button.scss';
 import buttonClassName from '../helpers/buttonClassName';
+import classes from '../helpers/classes';
 
-export type Props = {
-  theme?: 'button' | 'link' | 'text' |'dashed',
+export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  theme?: 'button' | 'link' | 'text' | 'dashed',
   size?: 'big' | 'small' | 'normal',
   level?: 'main' | 'normal' | 'danger',
   disabled?: boolean,
   loading?: boolean
 }
+
 const Button: React.FC<Props> = (props) => {
+  const {loading, disabled, children, className, ...rest} = props;
   return (
-    <button className={'star-button ' + buttonClassName(props)} disabled={props.disabled}>
-      {props.loading?<span className="star-loadingIndicator"/>:null}
-      {props.children}
+    <button
+      className={classes('star-button ', buttonClassName(props), className)}
+      disabled={disabled}
+      {...rest}>
+      {loading ? <span className="star-loadingIndicator"/> : null}
+      {children}
     </button>
   );
 };
