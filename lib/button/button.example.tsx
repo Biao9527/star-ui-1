@@ -8,6 +8,7 @@ const buttonExample = () => {
       <div>
         <Button>button</Button>
         <Button theme="button">button</Button>
+        <Button theme="dashed">button</Button>
         <Button theme="link">button</Button>
         <Button theme="text">button</Button>
       </div>
@@ -16,6 +17,11 @@ const buttonExample = () => {
         <Button size="big">button</Button>
         <Button>button</Button>
         <Button size="small">button</Button>
+      </div>
+      <div>
+        <Button theme="dashed" size="big">button</Button>
+        <Button theme="dashed" size="normal">button</Button>
+        <Button theme="dashed" size="small">button</Button>
       </div>
       <div>
         <Button theme="link" size="big">button</Button>
@@ -34,6 +40,11 @@ const buttonExample = () => {
         <Button level="danger">button</Button>
       </div>
       <div>
+        <Button theme="dashed" level="main">button</Button>
+        <Button theme="dashed" level="normal">button</Button>
+        <Button theme="dashed" level="danger">button</Button>
+      </div>
+      <div>
         <Button theme="link" level="main">button</Button>
         <Button theme="link" level="normal">button</Button>
         <Button theme="link" level="danger">button</Button>
@@ -50,6 +61,10 @@ const buttonExample = () => {
           <Button>button</Button>
         </div>
         <div>
+          <Button disabled theme="dashed">button</Button>
+          <Button theme="dashed">button</Button>
+        </div>
+        <div>
           <Button disabled theme="link">button</Button>
           <Button theme="link">button</Button>
         </div>
@@ -61,8 +76,9 @@ const buttonExample = () => {
       <h2>Loading</h2>
       <div>
         <Button loading>loading</Button>
-        <br/>
-        <Button>finish</Button>
+        <Button loading theme='dashed'>loading</Button>
+        <Button loading theme='link'>loading</Button>
+        <Button loading theme='text'>loading</Button>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import './button.scss';
 import buttonClassName from '../helpers/buttonClassName';
 
 export type Props = {
-  theme?: 'button' | 'link' | 'text',
+  theme?: 'button' | 'link' | 'text' |'dashed',
   size?: 'big' | 'small' | 'normal',
   level?: 'main' | 'normal' | 'danger',
   disabled?: boolean,

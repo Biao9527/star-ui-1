@@ -7,7 +7,9 @@ const buttonClassName = (props:Props)=>{
     classNameList.push('star-theme-text');
   } else if (theme === 'link') {
     classNameList.push('star-theme-link');
-  } else {
+  } else if (theme === 'dashed'){
+    classNameList.push('star-theme-dashed');
+  }else {
     classNameList.push('star-theme-button');
   }
   if (size === 'small') {

@@ -42,6 +42,12 @@ $grey:#bec8c8;
       color: lighten($blue, 10%);
     }
   }
+  &.star-theme-dashed{
+    border: 1px dashed  $border-color;
+    &:hover,&:focus{
+      border-color: $blue;
+    }
+  }
   &.star-theme-text{
     border-color: transparent;
     box-shadow: none;
@@ -82,7 +88,27 @@ $grey:#bec8c8;
       }
     }
   }
-  &.star-theme-link {
+  &.star-theme-dashed{
+    &.star-level-main {
+      color: $blue;
+      border-color: $blue;
+      &:hover,
+      &:focus {
+        color: lighten($blue, 10%);
+        border-color:lighten($blue, 10%);
+      }
+    }
+    &.star-level-danger {
+      border-color: $red;
+      color: $red;
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+        border-color: darken($red, 10%);
+      }
+    }
+  }
+  &.star-theme-link{
     &.star-level-danger {
       color: $red;
       &:hover,
@@ -107,7 +133,7 @@ $grey:#bec8c8;
       }
     }
   }
-  &.star-theme-button {
+  &.star-theme-button,&.star-theme-dashed {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
@@ -129,6 +155,16 @@ $grey:#bec8c8;
     color: $grey;
     &:hover{
       border-color: $grey;
+    }
+  }
+  &.star-theme-link, &.star-theme-text {
+    &.star-loading {
+      border-color: transparent;
+      box-shadow: none;
+      &:hover {
+        color: darken($grey, 10%);;
+        background: none;
+      }
     }
   }
   >.star-loadingIndicator{
