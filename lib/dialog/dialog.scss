@@ -1,0 +1,18 @@
+.star-dialog{
+  position: fixed;
+  background: #ffffff;
+  width: 10em;
+  height: 10em;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) ;
+  &-mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: fade-out(#000000,0.5);
+  }
+}
