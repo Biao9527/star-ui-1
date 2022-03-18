@@ -4,6 +4,10 @@ import Button from '../button/button';
 
 const dialogExample: React.FC = () => {
   const [x, setX] = useState(false);
+  const  xxx = <div>
+    <div>111</div>
+    <div>222</div>
+  </div>
   const fn = () => {
     console.log('ok');
     return false;
@@ -15,18 +19,20 @@ const dialogExample: React.FC = () => {
   return (
     <div>
       <div>
+        <h2>Dialog</h2>
         <Button onClick={() => setX(!x)}>dialog</Button>
         <Dialog visible={x}
-                title="我是个标题"
+                title={<strong>我是一个标题</strong>}
                 onClose={(bool) => setX(bool)}
                 ok={fn}
                 cancel={fn1}>
           <div>hi</div>
-          <div>ho1</div>
+          <div>hi1</div>
         </Dialog>
       </div>
       <div>
-        <Button onClick={()=>alert('hello','提示')}>alert</Button>
+        <h2>Alert</h2>
+        <Button onClick={()=>alert(xxx,'提示')}>alert</Button>
       </div>
     </div>
   );
