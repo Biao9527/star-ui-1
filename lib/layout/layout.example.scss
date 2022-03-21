@@ -1,0 +1,34 @@
+.l {
+  color: white;
+  .h {
+    height: 64px;
+    background: #7dbcea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .c {
+    min-height: 200px;
+    background: #108ee9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .f {
+    height: 64px;
+    background: #7dbcea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .a {
+    min-width: 200px;
+    background: #3ba0e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 500px) {
+      min-width: 140px;
+    }
+  }
+}

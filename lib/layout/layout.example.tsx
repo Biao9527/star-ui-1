@@ -4,48 +4,49 @@ import Header from './header';
 import Content from './content';
 import Footer from './footer';
 import Aside from './aside';
+import './layout.example.scss';
 
 const layoutExample: React.FC = () => {
   return (
     <div>
       <div>
         <h1>例子一</h1>
-        <Layout style={{height: 300}}>
-          <Header>header1</Header>
-          <Content>content2</Content>
-          <Footer>footer3</Footer>
+        <Layout className="l">
+          <Header className="h">Header</Header>
+          <Content className="c">Content</Content>
+          <Footer className="f">Footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>例子二</h1>
-        <Layout style={{height: 300}}>
-          <Header>header1</Header>
+        <Layout className="l">
+          <Header className="h">Header</Header>
           <Layout>
-            <Aside>aside</Aside>
-            <Content>content2</Content>
+            <Aside className="a">Aside</Aside>
+            <Content className="c">Content</Content>
           </Layout>
-          <Footer>footer3</Footer>
+          <Footer className="f">Footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>例子三</h1>
-        <Layout style={{height: 300}}>
-          <Header>header1</Header>
+        <Layout className="l">
+          <Header className="h">Header</Header>
           <Layout>
-            <Content>content2</Content>
-            <Aside>aside</Aside>
+            <Content className="c">Content</Content>
+            <Aside className="a">Aside</Aside>
           </Layout>
-          <Footer>footer3</Footer>
+          <Footer className="f">Footer</Footer>
         </Layout>
       </div>
       <div>
         <h1>例子四</h1>
-        <Layout>
-          <Aside>aside</Aside>
-          <Layout style={{height: 300}}>
-            <Header>header1</Header>
-            <Content>content2</Content>
-            <Footer>footer3</Footer>
+        <Layout className="l">
+          <Aside className="a">Aside</Aside>
+          <Layout>
+            <Header className="h">Header</Header>
+            <Content className="c">Content</Content>
+            <Footer className="f">Footer</Footer>
           </Layout>
         </Layout>
       </div>

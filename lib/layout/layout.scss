@@ -1,19 +1,16 @@
-.star-layout{
-  border: 1px solid red;
+.star-layout {
   display: flex;
   flex-direction: column;
-  &-hashAside{
+  &-hashAside {
     flex-direction: row;
-    >.star-layout{
+    > .star-layout {
       flex-direction: column;
     }
   }
-  &-content{
+  &-content {
     flex-grow: 1;
-    border: 1px solid yellow;
   }
-  & &{
+  & & {
     flex-grow: 1;
-    border: 1px solid blue;
   }
 }
