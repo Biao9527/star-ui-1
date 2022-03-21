@@ -1,8 +1,14 @@
 import React from 'react';
+import classes from '../helpers/classes';
 
-const Footer:React.FC = (props) => {
+interface Props extends React.HTMLAttributes<HTMLElement>{}
+const Footer:React.FC<Props> = (props) => {
+  const {className,...rest} = props
   return (
-    <div>{props.children}</div>
+    <div className={classes('star-layout-footer',className)}
+         {...rest}>
+      {props.children}
+    </div>
   )
 }
 

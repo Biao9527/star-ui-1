@@ -1,7 +1,14 @@
 import React from 'react';
-const Header:React.FC = (props) => {
+import classes from '../helpers/classes';
+
+interface Props extends React.HTMLAttributes<HTMLElement>{}
+const Header:React.FC<Props> = (props) => {
+  const {className,...rest} = props
   return (
-    <div>{props.children}</div>
+    <div className={classes('star-layout-header',className)}
+         {...rest}>
+      {props.children}
+    </div>
   )
 }
 

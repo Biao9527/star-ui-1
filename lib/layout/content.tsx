@@ -1,8 +1,14 @@
 import React from 'react';
+import classes from '../helpers/classes';
 
-const Content:React.FC = (props) => {
+interface Props extends React.HTMLAttributes<HTMLElement>{}
+const Content:React.FC<Props> = (props) => {
+  const {className,...rest} = props
   return (
-    <div>{props.children}</div>
+    <div className={classes('star-layout-content',className)}
+         {...rest}>
+      {props.children}
+    </div>
   )
 }
 

@@ -1,8 +1,14 @@
 import React from 'react';
+import classes from '../helpers/classes';
 
-const Aside = () => {
+interface Props extends React.HTMLAttributes<HTMLElement>{}
+const Aside:React.FC<Props> = (props) => {
+  const {className,...rest} = props
   return (
-    <div>aside</div>
+    <div className={classes('star-layout-aside',className)}
+         {...rest}>
+      {props.children}
+    </div>
   )
 }
 
