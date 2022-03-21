@@ -1,11 +1,11 @@
-import React, {ReactFragment, ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 import './dialog.scss';
 import Button from '../button/button';
 import ReactDOM from 'react-dom';
 import Dialog from './dialog';
 
 type Props = {
-  title: ReactNode | ReactFragment,
+  title: ReactNode,
   visible: boolean,
   onClose: (bool: boolean) => void,
   closeOnClickOverlay?: boolean,
@@ -44,7 +44,8 @@ const dialog: React.FC<Props> = (props) => {
               {props.children}
             </main>
             <footer>
-              {props.alert ? null :
+              {props.alert ?
+                <Button level="main" onClick={()=>props.onClose(false)}>确定</Button> :
                 <>
                   <Button level="main" onClick={ok}>确定</Button>
                   <Button onClick={cancel}>取消</Button>
@@ -58,7 +59,7 @@ const dialog: React.FC<Props> = (props) => {
   return ReactDOM.createPortal(dialogDiv, document.body);
 };
 
-const alert = (content: ReactNode | ReactFragment, title: ReactNode | ReactFragment) => {
+const alert = (content: ReactNode, title: ReactNode) => {
   const component = <Dialog
     alert
     visible={true} title={title}
