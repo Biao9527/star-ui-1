@@ -2,7 +2,6 @@ import React, {ReactNode} from 'react';
 import './dialog.scss';
 import Button from '../button/button';
 import ReactDOM from 'react-dom';
-import Dialog from './dialog';
 
 type Props = {
   title: ReactNode,
@@ -11,10 +10,12 @@ type Props = {
   closeOnClickOverlay?: boolean,
   ok?: () => void,
   cancel?: () => void,
-  alert?: boolean
+  alert?: boolean,
+  okText?: string
+  cancelText?: string
 }
 
-const dialog: React.FC<Props> = (props) => {
+const Dialog: React.FC<Props> = (props) => {
   const closeOverlay = () => {
     if (props.closeOnClickOverlay) {
       props.onClose(false);
@@ -45,10 +46,10 @@ const dialog: React.FC<Props> = (props) => {
             </main>
             <footer>
               {props.alert ?
-                <Button level="main" onClick={()=>props.onClose(false)}>确定</Button> :
+                <Button level="main" onClick={()=>props.onClose(false)}>{props.okText}</Button> :
                 <>
-                  <Button level="main" onClick={ok}>确定</Button>
-                  <Button onClick={cancel}>取消</Button>
+                  <Button level="main" onClick={ok}>{props.okText}</Button>
+                  <Button onClick={cancel}>{props.cancelText}</Button>
                 </>
               }
             </footer>
@@ -58,6 +59,10 @@ const dialog: React.FC<Props> = (props) => {
       null;
   return ReactDOM.createPortal(dialogDiv, document.body);
 };
+Dialog.defaultProps={
+  okText : '确定',
+  cancelText : '取消'
+}
 
 const alert = (content: ReactNode, title: ReactNode) => {
   const component = <Dialog
@@ -74,4 +79,4 @@ const alert = (content: ReactNode, title: ReactNode) => {
 };
 
 export {alert};
-export default dialog;
+export default Dialog;

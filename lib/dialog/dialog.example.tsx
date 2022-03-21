@@ -19,6 +19,8 @@ const dialogExample: React.FC = () => {
         <h2>Dialog</h2>
         <Button onClick={() => setVisible(!visible)}>dialog</Button>
         <Dialog visible={visible}
+                okText='OK'
+                cancelText="NO"
                 title={<strong>我是一个标题</strong>}
                 onClose={(bool) => setVisible(bool)}
                 ok={fn}
