@@ -5,18 +5,53 @@ import Content from './content';
 import Footer from './footer';
 import Aside from './aside';
 
-const layoutExample:React.FC = ()=>{
+const layoutExample: React.FC = () => {
   return (
     <div>
-      <h1>Layout</h1>
-      <Layout className='hi' style={{height:300,border:'1px solid red'}}>
-        <Header className='h1' style={{border:'1px solid black'}}>header1</Header>
-        <Content className='c1' style={{border:'1px solid green'}}>content2</Content>
-        <Aside className='a1' style={{border:'1px solid yellow'}}>aside</Aside>
-        <Footer className='f1' style={{border:'1px solid blue'}}>footer3</Footer>
-      </Layout>
+      <div>
+        <h1>例子一</h1>
+        <Layout style={{height: 300}}>
+          <Header>header1</Header>
+          <Content>content2</Content>
+          <Footer>footer3</Footer>
+        </Layout>
+      </div>
+      <div>
+        <h1>例子二</h1>
+        <Layout style={{height: 300}}>
+          <Header>header1</Header>
+          <Layout>
+            <Aside>aside</Aside>
+            <Content>content2</Content>
+          </Layout>
+          <Footer>footer3</Footer>
+        </Layout>
+      </div>
+      <div>
+        <h1>例子三</h1>
+        <Layout style={{height: 300}}>
+          <Header>header1</Header>
+          <Layout>
+            <Content>content2</Content>
+            <Aside>aside</Aside>
+          </Layout>
+          <Footer>footer3</Footer>
+        </Layout>
+      </div>
+      <div>
+        <h1>例子四</h1>
+        <Layout>
+          <Aside>aside</Aside>
+          <Layout style={{height: 300}}>
+            <Header>header1</Header>
+            <Content>content2</Content>
+            <Footer>footer3</Footer>
+          </Layout>
+        </Layout>
+      </div>
     </div>
-  )
-}
 
-export default layoutExample
+  );
+};
+
+export default layoutExample;
