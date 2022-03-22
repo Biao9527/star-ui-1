@@ -1,22 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter, Route, Link} from 'react-router-dom';
-import './lib/index.scss'
+import './example.scss';
+import './lib/index.scss';
 import IconExample from './lib/icon/icon.example';
 import ButtonExample from './lib/button/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
+import {Layout, Header, Aside, Content, Footer} from './lib/layout/layout';
+import Icon from './lib/icon/icon';
+
 
 ReactDOM.render(
   <HashRouter>
-    <div>
-      <header>
-        <div className="logo">
-          FUI
+    <Layout className="page">
+      <Header className="nav">
+        <div>
+          <Icon className="logo" name="star"/>
+          <p>Star-UI</p>
         </div>
-      </header>
-      <div>
-        <aside>
+        <a href="https://github.com/">
+          <Icon name="github" className='github'/>
+        </a>
+      </Header>
+      <Layout className="mainWrapper">
+        <Aside className="aside">
           <h2>组件</h2>
           <ul>
             <li>
@@ -32,16 +40,17 @@ ReactDOM.render(
               <Link to="/layout">布局</Link>
             </li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content className="content">
           <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
-        </main>
-      </div>
-      <div>
-      </div>
-    </div>
+        </Content>
+      </Layout>
+      <Footer className="footer">
+        footer
+      </Footer>
+    </Layout>
   </HashRouter>
   , document.querySelector('#root'));

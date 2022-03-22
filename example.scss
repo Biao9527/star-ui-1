@@ -1,0 +1,44 @@
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: #1890ff;
+  }
+}
+.page {
+  min-height: 100vh;
+  .nav {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid #eaecef;
+    > div {
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 2em;
+        height: 2em;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        padding-left: 10px;
+      }
+    }
+    .github {
+      width: 1.4em;
+      height: 1.4em;
+      fill: #333333;
+    }
+  }
+  .mainWrapper {
+    .aside {
+      border-right: 1px solid #eaecef;
+      min-width: 280px;
+    }
+    .content {
+    }
+  }
+}
