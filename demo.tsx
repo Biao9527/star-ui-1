@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Button from './lib/button/button';
+import Highlight,{defaultProps} from 'prism-react-renderer'
 import './demo.scss'
 
 type Props = {
@@ -21,9 +22,19 @@ const Demo: React.FC<Props> = (props) => {
       </div>
       {visible?
       <div className='demo-code'>
-        <pre>
-          {props.code}
-        </pre>
+        <Highlight {...defaultProps} code={props.code} language="tsx">
+          {({className,style,tokens,getLineProps,getTokenProps})=>(
+            <pre className={className} style={style}>
+              {tokens.map((line,i)=>(
+                <div {...getLineProps({line,key:i})}>
+                  {line.map((token,key)=>(
+                    <span {...getTokenProps({token, key})}/>
+                  ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
       </div>:null
       }
     </div>
