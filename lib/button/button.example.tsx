@@ -9,28 +9,33 @@ import Demo from '../../demo';
 const buttonExample = () => {
   return (
     <div>
-      <h2>Button</h2>
-      <Demo code={require('!!raw-loader!./examples/button1.tsx').default}>
+      <h1>Button</h1>
+      <Demo
+        title='Type'
+        code={require('!!raw-loader!./examples/button1.tsx').default}>
         <Button1/>
       </Demo>
-
-      <h2>Size</h2>
-      <Demo code={require('!!raw-loader!./examples/button2.tsx').default}>
+      <Demo
+        title='Size'
+        code={require('!!raw-loader!./examples/button2.tsx').default}>
         <Button2/>
       </Demo>
 
-      <h2>Level</h2>
-      <Demo code={require('!!raw-loader!./examples/button3.tsx').default}>
+      <Demo
+        title='Level'
+        code={require('!!raw-loader!./examples/button3.tsx').default}>
         <Button3/>
       </Demo>
 
-      <h2>Disabled</h2>
-      <Demo code={require('!!raw-loader!./examples/button4.tsx').default}>
+      <Demo
+        title='Disabled'
+        code={require('!!raw-loader!./examples/button4.tsx').default}>
       <Button4/>
       </Demo>
 
-      <h2>Loading</h2>
-      <Demo code={require('!!raw-loader!./examples/button5.tsx').default}>
+      <Demo
+        title='Loading'
+        code={require('!!raw-loader!./examples/button5.tsx').default}>
         <Button5/>
       </Demo>
     </div>
