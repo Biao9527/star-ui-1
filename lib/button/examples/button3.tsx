@@ -4,21 +4,21 @@ import React from 'react';
 const Button3 = () => {
   return (
     <div>
-      <Button level="main">button</Button>
-      <Button>button</Button>
-      <Button level="danger">button</Button>
+      <Button level="main">Main</Button>
+      <Button>Normal</Button>
+      <Button level="danger">Danger</Button>
       <br/>
-      <Button theme="dashed" level="main">button</Button>
-      <Button theme="dashed" level="normal">button</Button>
-      <Button theme="dashed" level="danger">button</Button>
+      <Button theme="dashed" level="main">Main</Button>
+      <Button theme="dashed" level="normal">Normal</Button>
+      <Button theme="dashed" level="danger">Danger</Button>
       <br/>
-      <Button theme="link" level="main">button</Button>
-      <Button theme="link" level="normal">button</Button>
-      <Button theme="link" level="danger">button</Button>
+      <Button theme="link" level="main">Main</Button>
+      <Button theme="link" level="normal">Normal</Button>
+      <Button theme="link" level="danger">Danger</Button>
       <br/>
-      <Button theme="text" level="main">button</Button>
-      <Button theme="text" level="normal">button</Button>
-      <Button theme="text" level="danger">button</Button>
+      <Button theme="text" level="main">Main</Button>
+      <Button theme="text" level="normal">Normal</Button>
+      <Button theme="text" level="danger">Danger</Button>
       <br/>
     </div>
   );

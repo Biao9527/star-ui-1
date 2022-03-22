@@ -4,10 +4,10 @@ import React from 'react';
 const Button5 = () => {
   return (
     <div>
-      <Button loading>loading</Button>
-      <Button loading theme="dashed">loading</Button>
-      <Button loading theme="link">loading</Button>
-      <Button loading theme="text">loading</Button>
+      <Button loading>Loading</Button>
+      <Button loading theme="dashed">Loading</Button>
+      <Button loading theme="link">Loading</Button>
+      <Button loading theme="text">Loading</Button>
     </div>
   );
 };

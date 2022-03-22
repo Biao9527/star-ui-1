@@ -4,11 +4,11 @@ import React from 'react';
 const Button1 = () => {
   return (
     <div>
-      <Button>button</Button>
-      <Button theme="button">button</Button>
-      <Button theme="dashed">button</Button>
-      <Button theme="link">button</Button>
-      <Button theme="text">button</Button>
+      <Button>Button</Button>
+      <Button theme="button">Button</Button>
+      <Button theme="dashed">Dashed</Button>
+      <Button theme="link">Link</Button>
+      <Button theme="text">Text</Button>
     </div>
   );
 };
