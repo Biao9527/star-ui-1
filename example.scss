@@ -72,4 +72,29 @@ a {
       padding: 40px 20px;
     }
   }
+  .bottom{
+    background: #f6f6f687;
+    color: #969696;
+    font-size: 14px;
+    min-height: 40px;
+    border-top: 1px solid #eaecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >a{
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      >span{
+        padding-left: 2px;
+      }
+      &:hover{
+        color: darken(#969696,15%);
+      }
+    }
+    >span{
+      margin-left: 20px;
+    }
+  }
 }

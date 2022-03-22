@@ -44,7 +44,15 @@ ReactDOM.render(
         </Content>
       </Layout>
       <Footer className="bottom">
-        footer
+        <a href="https://github.com/">
+          <Icon name="github"/>
+          <span>GitHub</span>
+        </a>
+        <a href="https://github.com/">
+          <Icon name='star'/>
+          <span>Star-UI</span>
+        </a>
+        <span>&copy; Biao9527</span>
       </Footer>
     </Layout>
   </HashRouter>
