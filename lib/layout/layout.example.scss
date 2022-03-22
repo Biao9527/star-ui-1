@@ -1,34 +1,31 @@
-.l {
+.layout {
   color: white;
-  .h {
+  .header {
     height: 64px;
     background: #7dbcea;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .c {
+  .content {
     min-height: 200px;
     background: #108ee9;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .f {
+  .footer {
     height: 64px;
     background: #7dbcea;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .a {
-    min-width: 200px;
+  .aside {
+    min-width: 100px;
     background: #3ba0e9;
     display: flex;
     align-items: center;
     justify-content: center;
-    @media (max-width: 500px) {
-      min-width: 140px;
-    }
   }
 }

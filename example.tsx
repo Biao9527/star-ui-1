@@ -23,7 +23,7 @@ ReactDOM.render(
         </a>
       </Header>
       <Layout className="mainWrapper">
-        <Aside className="aside">
+        <Aside className="sidebar">
           <span>Components</span>
           <ul>
             <li>
@@ -37,13 +37,13 @@ ReactDOM.render(
             </li>
           </ul>
         </Aside>
-        <Content className="content">
+        <Content className="main">
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
         </Content>
       </Layout>
-      <Footer className="footer">
+      <Footer className="bottom">
         footer
       </Footer>
     </Layout>

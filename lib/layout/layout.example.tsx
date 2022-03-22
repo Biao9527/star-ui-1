@@ -1,55 +1,34 @@
 import React from 'react';
-import Layout from './layout';
-import Header from './header';
-import Content from './content';
-import Footer from './footer';
-import Aside from './aside';
 import './layout.example.scss';
+import Demo from '../../demo';
+import Layout1 from './examples/layout1';
+import Layout2 from './examples/layout2';
+import Layout3 from './examples/layout3';
+import Layout4 from './examples/layout4';
 
 const layoutExample: React.FC = () => {
   return (
     <div>
-      <div>
-        <h1>例子一</h1>
-        <Layout className="l">
-          <Header className="h">Header</Header>
-          <Content className="c">Content</Content>
-          <Footer className="f">Footer</Footer>
-        </Layout>
-      </div>
-      <div>
-        <h1>例子二</h1>
-        <Layout className="l">
-          <Header className="h">Header</Header>
-          <Layout>
-            <Aside className="a">Aside</Aside>
-            <Content className="c">Content</Content>
-          </Layout>
-          <Footer className="f">Footer</Footer>
-        </Layout>
-      </div>
-      <div>
-        <h1>例子三</h1>
-        <Layout className="l">
-          <Header className="h">Header</Header>
-          <Layout>
-            <Content className="c">Content</Content>
-            <Aside className="a">Aside</Aside>
-          </Layout>
-          <Footer className="f">Footer</Footer>
-        </Layout>
-      </div>
-      <div>
-        <h1>例子四</h1>
-        <Layout className="l">
-          <Aside className="a">Aside</Aside>
-          <Layout>
-            <Header className="h">Header</Header>
-            <Content className="c">Content</Content>
-            <Footer className="f">Footer</Footer>
-          </Layout>
-        </Layout>
-      </div>
+      <Demo
+        title='例子一'
+        code={require('!!raw-loader!./examples/layout1.tsx').default}>
+        <Layout1/>
+      </Demo>
+      <Demo
+        title='例子二'
+        code={require('!!raw-loader!./examples/layout2.tsx').default}>
+        <Layout2/>
+      </Demo>
+      <Demo
+        title='例子三'
+        code={require('!!raw-loader!./examples/layout3.tsx').default}>
+        <Layout3/>
+      </Demo>
+      <Demo
+        title='例子四'
+        code={require('!!raw-loader!./examples/layout4.tsx').default}>
+        <Layout4/>
+      </Demo>
     </div>
 
   );
