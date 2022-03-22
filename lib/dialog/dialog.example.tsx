@@ -1,50 +1,28 @@
-import React, {useState} from 'react';
-import Dialog, {alert} from './dialog';
-import Button from '../button/button';
+import React from 'react';
+import Demo from '../../demo';
+import Dialog1 from './examples/dialog1';
+import Dialog2 from './examples/dialog2';
+import Dialog3 from './examples/dialog3';
 
 const dialogExample: React.FC = () => {
-  const [visible, setVisible] = useState(false);
-  const [visible1, setVisible1] = useState(false);
-  const fn = () => {
-    console.log('ok');
-    return false;
-  };
-  const fn1 = () => {
-    console.log('cancel');
-    return true;
-  };
+
   return (
     <div>
-      <div>
-        <h2>Dialog</h2>
-        <Button onClick={() => setVisible(!visible)}>dialog</Button>
-        <Dialog visible={visible}
-                okText='OK'
-                cancelText="NO"
-                title={<strong>我是一个标题</strong>}
-                onClose={(bool) => setVisible(bool)}
-                ok={fn}
-                cancel={fn1}>
-          <div>hi</div>
-          <div>hi1</div>
-        </Dialog>
-      </div>
-      <div>
-        <h2>Alert</h2>
-        <Button onClick={() => setVisible1(!visible1)}>alert</Button>
-        <Dialog alert
-                visible={visible1}
-                title={<strong>Alert标题</strong>}
-                onClose={(bool) => setVisible1(bool)}
-               >
-          <div>Alert</div>
-          <div>Alert1</div>
-        </Dialog>
-      </div>
-      <div>
-        <h2>一键 Alert</h2>
-        <Button onClick={()=>alert(<div>hi</div>,'提示')}>alert</Button>
-      </div>
+      <Demo
+        title="Dialog"
+        code={require('!!raw-loader!./examples/dialog1.tsx').default}>
+        <Dialog1/>
+      </Demo>
+      <Demo
+        title="Alert"
+        code={require('!!raw-loader!./examples/dialog2.tsx').default}>
+        <Dialog2/>
+      </Demo>
+      <Demo
+        title="一键 Alert"
+        code={require('!!raw-loader!./examples/dialog3.tsx').default}>
+        <Dialog3/>
+      </Demo>
     </div>
   );
 };
