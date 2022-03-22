@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Button from './lib/button/button';
+import './demo.scss'
 
 type Props = {
   code: string
@@ -9,7 +10,7 @@ const Demo: React.FC<Props> = (props) => {
   const [visible ,setVisible] = useState(false)
   return (
     <div className="demo">
-      <span>{props.title}</span>
+      <h2>{props.title}</h2>
       <div className="demo-component">
         {props.children}
       </div>
