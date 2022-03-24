@@ -22,13 +22,13 @@ ReactDOM.render(
           <Icon className="logo" name="star"/>
           <p>Star-UI</p>
         </div>
-        <a href="https://github.com/">
+        <a href="https://github.com/Biao9527/star-ui-1">
           <Icon name="github" className="github"/>
         </a>
       </Header>
       <Layout className="mainWrapper">
         <Aside className="sidebar">
-          <span>Star UI</span>
+          <span>Essentials</span>
           <ul>
             <li>
               <NavLink exact to="/">介绍</NavLink>
@@ -63,11 +63,11 @@ ReactDOM.render(
         </Content>
       </Layout>
       <Footer className="bottom">
-        <a href="https://github.com/">
+        <a href="https://github.com/Biao9527/star-ui-1">
           <Icon name="github"/>
           <span>GitHub</span>
         </a>
-        <a href="https://github.com/">
+        <a href="https://github.com/Biao9527/star-ui-1">
           <Icon name='star'/>
           <span>Star-UI</span>
         </a>
