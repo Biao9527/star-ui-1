@@ -6,26 +6,31 @@
 - 官网：https://biao9527.github.io/star-ui-website/
 
 ## 使用方法
+
 ### 安装
+
 在项目中，使用终端执行以下命令
+
 ```
 npm install star-react-ui
 ```
+
 或者
+
 ```
 yarn add star-react-ui
 ```
 
 ### 使用
+
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom'
-import {Button} from 'star-react-ui'
+import ReactDOM from 'react-dom';
+import {Button} from 'star-react-ui';
 
 ReactDOM.render(
-<div>
-<Button>Default</Button>
-</div>,
-document.querySelector('#root')
-)
+  <div>
+    <Button>Button</Button>
+  </div>,
+  document.querySelector('#root'));
 ```
