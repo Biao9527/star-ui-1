@@ -1,0 +1,80 @@
+$h: 22px;
+$h2: $h - 4px;
+.star-switch {
+  height: $h;
+  width: $h * 2;
+  border: none;
+  background: #bfbfbf;
+  border-radius: $h/2;
+  position: relative;
+  > span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    background: white;
+    border-radius: $h2 / 2;
+    transition: all 250ms;
+  }
+  &.star-checked {
+    background: #1890ff;
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    > span {
+      width: $h2 + 4px;
+    }
+  }
+  &.star-checked:active {
+    > span {
+      width: $h2 + 4px;
+      margin-left: -4px;
+    }
+  }
+  &.star-switch-small {
+    width: $h * 1.2;
+    height: $h * 0.8;
+    > span {
+      width: $h2 * 0.75;
+      height: $h2 * 0.75;
+    }
+    &.star-checked > span {
+      left: calc(100% - #{$h2 * 0.75} - 2px);
+    }
+    &:active {
+      > span {
+        width: $h2;
+      }
+    }
+  }
+  &.star-switch-big {
+    height: $h * 1.4;
+    width: $h * 2.8;
+    border-radius: $h/1.4;
+    > span {
+      width: $h2 * 1.45;
+      height: $h2 * 1.45;
+      border-radius: 50%;
+    }
+    &.star-checked > span {
+      left: calc(100% - #{$h2 * 1.5} - 2px);
+    }
+    &:active {
+      > span {
+        width: $h2;
+      }
+    }
+  }
+  &.star-switch-disabled {
+    background: #bfbfbf;
+    &:hover {
+      cursor: no-drop;
+    }
+  }
+}
