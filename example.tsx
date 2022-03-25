@@ -12,6 +12,7 @@ import Icon from './lib/icon/icon';
 import Introduce from './lib/components/introduce';
 import Install from './lib/components/install';
 import QuickUse from './lib/components/quickUse';
+import SwitchExample from './lib/switch/switch.example';
 
 
 ReactDOM.render(
@@ -43,6 +44,9 @@ ReactDOM.render(
           <span>Components</span>
           <ul>
             <li>
+              <NavLink to="/switch">Switch</NavLink>
+            </li>
+            <li>
               <NavLink to="/button">Button</NavLink>
             </li>
             <li>
@@ -57,6 +61,7 @@ ReactDOM.render(
           <Route path="/" component={Introduce} exact/>
           <Route path="/install" component={Install}/>
           <Route path="/quickUse" component={QuickUse}/>
+          <Route path="/switch" component={SwitchExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
