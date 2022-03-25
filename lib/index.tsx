@@ -12,4 +12,5 @@ export {default as Footer} from './layout/footer'
 export {default as Button} from './button/button'
 export {default as Dialog} from './dialog/dialog'
 export {default as openAlert} from './dialog/openAlert'
+export {default as Switch} from './switch/switch'
 
